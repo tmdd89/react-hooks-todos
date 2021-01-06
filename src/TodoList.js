@@ -1,4 +1,5 @@
 import React from "react";
+import Todo from "./Todo";
 import {
   Paper,
   List,
@@ -13,9 +14,7 @@ function TodoList(props) {
       <List>
         {props.todos.map((todo) => (
           <>
-            <ListItem>
-              <ListItemText>{todo.task}</ListItemText>
-            </ListItem>
+            <Todo task={todo.task} key={todo.id} completed={todo.completed} />
             <Divider />
           </>
         ))}
