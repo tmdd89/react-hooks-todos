@@ -1,9 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { useState } from "react";
 import { uniqueId } from "../helpers/uniqueId";
+import useLocalStorageState from "./useLocalStorageState";
 
 export default (initialTodos) => {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useLocalStorageState("todos", initialTodos);
 
   return {
     todos,
