@@ -8,10 +8,10 @@ import {
   IconButton,
   ListItemSecondaryAction,
 } from "@material-ui/core";
-import { TodosContext } from "./context/todos.context";
+import { DispatchContext } from "./context/todos.context";
 
 function Todo({ id, task, completed }) {
-  const { dispatch } = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
   const [isEditing, toggle] = useToggle(false);
   return (
     <ListItem style={{ height: "64px" }}>
